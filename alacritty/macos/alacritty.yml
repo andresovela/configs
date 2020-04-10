@@ -49,7 +49,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  #decorations: full
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -60,7 +60,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  #startup_mode: Windowed
+  startup_mode: Windowed
 
   # Window title
   #title: Alacritty
@@ -136,7 +136,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 11.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -165,88 +165,53 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  #use_thin_strokes: true
+  use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Tomorrow Night Bright)
+# Base16 Atelier Sulphurpool 256 - alacritty color config
+# Bram de Haan (http://atelierbramdehaan.nl)
 colors:
   # Default colors
   primary:
-    background: '#000000'
-    foreground: '#eaeaea'
+    background: '0x202746'
+    foreground: '0x979db4'
 
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    dim_foreground: '#9a9a9a'
-    bright_foreground: '#ffffff'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
-  #cursor:
-    text: '#000000'
-    cursor: '#ffffff'
-
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area. If selection
-  # background is unset, selection color will be the inverse of the cell colors.
-  # If only text is unset the cell text color will remain the same.
-  #selection:
-    text: '#eaeaea'
-    background: '#404040'
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x202746'
+    cursor: '0x979db4'
 
   # Normal colors
   normal:
-    black:   '#000000'
-    red:     '#d54e53'
-    green:   '#b9ca4a'
-    yellow:  '#e6c547'
-    blue:    '#7aa6da'
-    magenta: '#c397d8'
-    cyan:    '#70c0ba'
-    white:   '#eaeaea'
+    black:   '0x202746'
+    red:     '0xc94922'
+    green:   '0xac9739'
+    yellow:  '0xc08b30'
+    blue:    '0x3d8fd1'
+    magenta: '0x6679cc'
+    cyan:    '0x22a2c9'
+    white:   '0x979db4'
 
   # Bright colors
   bright:
-    black:   '#666666'
-    red:     '#ff3334'
-    green:   '#9ec400'
-    yellow:  '#e7c547'
-    blue:    '#7aa6da'
-    magenta: '#b77ee0'
-    cyan:    '#54ced6'
-    white:   '#ffffff'
+    black:   '0x6b7394'
+    red:     '0xc94922'
+    green:   '0xac9739'
+    yellow:  '0xc08b30'
+    blue:    '0x3d8fd1'
+    magenta: '0x6679cc'
+    cyan:    '0x22a2c9'
+    white:   '0xf5f7ff'
 
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  dim:
-    black:   '#000000'
-    red:     '#8c3336'
-    green:   '#7a8530'
-    yellow:  '#97822e'
-    blue:    '#506d8f'
-    magenta: '#80638e'
-    cyan:    '#497e7a'
-    white:   '#9a9a9a'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '#ff00ff' }`
-  #
-  #indexed_colors: []
+  indexed_colors:
+    - { index: 16, color: '0xc76b29' }
+    - { index: 17, color: '0x9c637a' }
+    - { index: 18, color: '0x293256' }
+    - { index: 19, color: '0x5e6687' }
+    - { index: 20, color: '0x898ea4' }
+    - { index: 21, color: '0xdfe2f1' }
 
 # Visual Bell
 #
